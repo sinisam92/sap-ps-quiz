@@ -956,15 +956,6 @@ export default [
     ],
   },
   {
-    question: 'What is component assignment in the network in SAP PS?',
-    type: 'true_false',
-    options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
-    ],
-    correct_answer: 'True',
-  },
-  {
     question: 'What is material procurement in SAP PS?',
     type: 'multiple_choice',
     options: [
@@ -979,24 +970,6 @@ export default [
     ],
     correct_answer:
       'Procurement of goods and services required for project activities',
-  },
-  {
-    question: 'Which of the following is true about WBS in SAP PS?',
-    type: 'true_false',
-    options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
-    ],
-    correct_answer: 'True',
-  },
-  {
-    question: 'Which of the following is true about BOM in SAP PS?',
-    type: 'true_false',
-    options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
-    ],
-    correct_answer: true,
   },
   {
     question: 'What is a Work Breakdown Structure (WBS) in SAP PS?',
@@ -1116,15 +1089,6 @@ export default [
     correct_answer: 'To plan and allocate resources',
   },
   {
-    question: 'What is the difference between a budget and a plan in SAP PS?',
-    type: 'true_false',
-    options: [
-      { option: false, value: true },
-      { option: true, value: false },
-    ],
-    correct_answer: false,
-  },
-  {
     question:
       'Which of the following is a component of a cost center in SAP PS?',
     type: 'multiple_right_answers',
@@ -1216,19 +1180,19 @@ export default [
   },
   {
     question: 'What is the purpose of a commitment in SAP PS?',
-    type: 'true_false',
+    type: 'multiple_choice',
     options: [
       {
-        options: 'To reserve funds for planned project activities',
+        option: 'To reserve funds for planned project activities',
         value: true,
       },
-      { options: 'To record actual project costs', value: true },
+      { option: 'To record actual project costs', value: true },
     ],
     correct_answer: 'To reserve funds for planned project activities',
   },
   {
     question: 'What is the purpose of a variance in SAP PS?',
-    type: 'true_false',
+    type: 'multiple_choice',
     options: [
       {
         option: 'To compare actual costs to planned costs for a project',
@@ -1240,7 +1204,7 @@ export default [
   },
   {
     question: 'What is the purpose of a report in SAP PS?',
-    type: 'true_false',
+    type: 'multiple_choice',
     options: [
       {
         option: 'To provide information on project costs and progress',
@@ -1284,36 +1248,6 @@ export default [
     correct_answer: 'To track costs and revenues for a project',
   },
   {
-    question: 'What is a budget in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answer: true,
-  },
-  {
-    question: 'What is a budget profile in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answer: true,
-  },
-  {
     question:
       'Which of the following are types of budgets in SAP PS? (Select all that apply)',
     type: 'multiple_right_answers',
@@ -1336,36 +1270,6 @@ export default [
       },
     ],
     correct_answers: ['Cost budget', 'Revenue budget', 'Cash budget'],
-  },
-  {
-    question: 'What is variance analysis in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answer: true,
-  },
-  {
-    question: 'What is a report in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answer: true,
   },
   {
     question:
@@ -1395,21 +1299,6 @@ export default [
       'Resource reports',
       'Material reports',
     ],
-  },
-  {
-    question: 'What is a commitment in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answer: true,
   },
   {
     question: 'Can you set different dates for the same project in SAP PS?',
@@ -1633,36 +1522,6 @@ export default [
     correct_answer: true,
   },
   {
-    question: 'What is a milestone in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answers: ['True'],
-  },
-  {
-    question: 'What is a date-driven planning process in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answers: ['True'],
-  },
-  {
     question:
       'What is the difference between the planned start and actual start date in SAP PS?',
     type: 'multiple_right_answers',
@@ -1691,36 +1550,6 @@ export default [
     correct_answers: [
       'The planned start date is the date when the activity was originally scheduled to begin, while the actual start date is the date when it actually began',
     ],
-  },
-  {
-    question: 'What is the earliest start date in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answers: ['True'],
-  },
-  {
-    question: 'What is the latest finish date in SAP PS?',
-    type: 'true_false',
-    options: [
-      {
-        option: 'True',
-        value: true,
-      },
-      {
-        option: 'False',
-        value: false,
-      },
-    ],
-    correct_answers: ['True'],
   },
   {
     question:
