@@ -103,7 +103,7 @@ span {
     transparent 70%
   );
 }
-@media screen and (max-width: 467px){
+@media screen and (max-width: 767px){
   .warning-wrapper {
     padding: 1rem;
   }
