@@ -5,6 +5,8 @@ import questions2 from './data/questions2';
 
 function App() {
   const [results, setResults] = useState([]);
+  const [randomizedArr, setRandomizedArr] = useState([]);
+  console.log(randomizedArr);
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -35,13 +37,20 @@ function App() {
     // update the results state
     setResults(newResults);
   };
-  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
-  const shuffledQuestions = shuffle(questions);
-  const shuffledQuestions2 = shuffle(questions2);
-  const randomQuestionArray =
-    Math.random() < 0.5 ? shuffledQuestions : shuffledQuestions2;
+  const handleChangeQuestions = () => {
+    let randomQuestionArray = [];
+    const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
+    const shuffledQuestions = shuffle(questions);
+    const shuffledQuestions2 = shuffle(questions2);
+    randomQuestionArray =
+      Math.random() < 0.5 ? shuffledQuestions : shuffledQuestions2;
+    console.log(randomQuestionArray);
+    // setRandomizedArr(randomQuestionArray);
+    return randomQuestionArray;
+  };
+  console.log(handleChangeQuestions());
   return (
     <>
       <h1>SAP Project Systems Certification Quiz</h1>
@@ -56,9 +65,14 @@ function App() {
         <span className='bottom'></span>
         <span className='left'></span>
       </div>
+      <div className='changle-questions--wraper'>
+        <button className='change-questions' onClick={handleChangeQuestions}>
+          Suffle Questions
+        </button>
+      </div>
       <form onSubmit={handleSubmit}>
         <ol>
-          {randomQuestionArray.map((question, index) => (
+          {questions.map((question, index) => (
             <li key={index}>
               <h3>{question.question}</h3>
               {question.options.map((option, optionIndex) => {
@@ -93,7 +107,7 @@ function App() {
           ))}
         </ol>
         <div className='button-wrapper'>
-          <button type='submit' value='Submit'>
+          <button type='button' onClick={handleSubmit}>
             SUBMIT
           </button>
         </div>
