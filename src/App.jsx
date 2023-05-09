@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import questions from './data/questions';
+import questions2 from './data/questions2';
 
 function App() {
   const [results, setResults] = useState([]);
@@ -34,10 +35,13 @@ function App() {
     // update the results state
     setResults(newResults);
   };
-  console.log('questions', questions);
   const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+
   const shuffledQuestions = shuffle(questions);
-  console.log(shuffledQuestions);
+  const shuffledQuestions2 = shuffle(questions2);
+  const randomQuestionArray =
+    Math.random() < 0.5 ? shuffledQuestions : shuffledQuestions2;
+
   return (
     <>
       <h1>SAP Project Systems Certification Quiz</h1>
@@ -54,7 +58,7 @@ function App() {
       </div>
       <form onSubmit={handleSubmit}>
         <ol>
-          {shuffledQuestions.map((question, index) => (
+          {randomQuestionArray.map((question, index) => (
             <li key={index}>
               <h3>{question.question}</h3>
               {question.options.map((option, optionIndex) => {
