@@ -89,15 +89,6 @@ export default [
     correct_answer: true,
   },
   {
-    question: 'SAP Project System is a module within SAP ERP.',
-    type: 'true_false',
-    options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
-    ],
-    correct_answer: true,
-  },
-  {
     question:
       'A WBS element in SAP PS represents a single task or a group of related tasks.',
     type: 'true_false',
@@ -417,25 +408,6 @@ export default [
       { option: 'Quality planning', value: false },
     ],
     correct_answer: ['Cost planning', 'Resource planning'],
-  },
-  {
-    question: 'What is the purpose of the project builder in SAP PS?',
-    type: 'multiple_choice',
-    options: [
-      { option: 'To manage project materials and goods', value: false },
-      {
-        option:
-          'To define the scope, objectives, and requirements of the project',
-        value: false,
-      },
-      {
-        option: 'To create and modify project structures and activities',
-        value: true,
-      },
-      { option: 'To track project budgets and expenditures', value: false },
-      { option: 'To create and manage project risks and issues', value: false },
-    ],
-    correct_answer: 'To create and modify project structures and activities',
   },
   {
     question: 'What is the purpose of the project planning board in SAP PS?',
