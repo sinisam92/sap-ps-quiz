@@ -71,15 +71,15 @@ function App() {
         <ol>
           {randomizedArr.map((question, index) => (
             <div key={index} className='questions-container'>
-              {showAnswersButton && (
-                <div className='show-answers--button'>
-                  <button onClick={() => handleShowAnswers(index)}>
-                    Show Answers
-                  </button>
-                </div>
-              )}
               <li>
                 <h3>{question.question}</h3>
+                {showAnswersButton && (
+                  <div className='show-answers--button'>
+                    <button onClick={() => handleShowAnswers(index)}>
+                      Show Answers
+                    </button>
+                  </div>
+                )}
                 {question.options.map((option, optionIndex) => {
                   if (
                     question.type === 'true_false' ||

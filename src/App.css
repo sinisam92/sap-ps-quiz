@@ -126,6 +126,13 @@ span {
   form ol {
     padding: 0;
   }
+  .show-answers--button {
+    position: initial;
+
+  }
+  .show-answers--button {
+    margin: 1rem 0;
+  }
 }
 /* .top {
   animation: animateTop 3s ease-in-out infinite;
