@@ -1189,7 +1189,7 @@ export default [
         option: 'To compare actual costs to planned costs for a project',
         value: true,
       },
-      { option: 'To track progress of project activities', value: true },
+      { option: 'To track progress of project activities', value: false },
     ],
     correct_answer: 'To compare actual costs to planned costs for a project',
   },
