@@ -1,56 +1,45 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import questions from './data/questions';
 import questions2 from './data/questions2';
 
 function App() {
   const [results, setResults] = useState([]);
+  const [buttonClicked, setButtonClicked] = useState(false);
   const [randomizedArr, setRandomizedArr] = useState([]);
-  console.log(randomizedArr);
+  // console.log(randomizedArr);
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const newResults = [];
-
-    // loop over all questions
-    questions.forEach((question, index) => {
-      // select all input elements that belong to this question
+    // const newResults = [];
+    randomizedArr.forEach((question, index) => {
       const inputs = document.querySelectorAll(`input[name="${index}"]`);
-
-      // loop over all inputs and check if they are checked
       inputs.forEach((input) => {
         if (input.checked) {
-          // check if the selected answer is correct
           const isCorrect = input.value === String(true);
-
-          // add a class to the input based on the result
           input.parentElement.classList.add(
             isCorrect ? 'correct' : 'incorrect'
           );
-
-          // add the result to the array of results
-          newResults.push({ question: question.question, isCorrect });
+          // newResults.push({ question: question.question, isCorrect });
         }
       });
     });
-
-    // update the results state
-    setResults(newResults);
+    // setResults(newResults);
   };
-
-  const handleChangeQuestions = () => {
-    let randomQuestionArray = [];
+  useEffect(() => {
     const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
-
     const shuffledQuestions = shuffle(questions);
     const shuffledQuestions2 = shuffle(questions2);
-    randomQuestionArray =
+
+    const randomQuestionArray =
       Math.random() < 0.5 ? shuffledQuestions : shuffledQuestions2;
-    console.log(randomQuestionArray);
-    // setRandomizedArr(randomQuestionArray);
-    return randomQuestionArray;
+    setRandomizedArr(randomQuestionArray);
+  }, [buttonClicked]);
+
+  const handleButtonClick = () => {
+    setButtonClicked((prevState) => !prevState);
   };
-  console.log(handleChangeQuestions());
+
   return (
     <>
       <h1>SAP Project Systems Certification Quiz</h1>
@@ -66,13 +55,13 @@ function App() {
         <span className='left'></span>
       </div>
       <div className='changle-questions--wraper'>
-        <button className='change-questions' onClick={handleChangeQuestions}>
-          Suffle Questions
+        <button className='change-questions' onClick={handleButtonClick}>
+          New Questions
         </button>
       </div>
       <form onSubmit={handleSubmit}>
         <ol>
-          {questions.map((question, index) => (
+          {randomizedArr.map((question, index) => (
             <li key={index}>
               <h3>{question.question}</h3>
               {question.options.map((option, optionIndex) => {

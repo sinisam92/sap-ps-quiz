@@ -1123,15 +1123,6 @@ export default [
     correct_answer: 'To compare planned costs against actual costs',
   },
   {
-    question: "What is a 'cost center hierarchy' in SAP PS?",
-    type: 'true_false',
-    options: [
-      { option: true, value: true },
-      { option: false, value: false },
-    ],
-    correct_answer: true,
-  },
-  {
     question: "What is a 'profit center' in SAP PS?",
     type: 'multiple_choice',
     options: [

@@ -103,6 +103,13 @@ span {
     transparent 70%
   );
 }
+.changle-questions--wraper {
+ width: 100%;
+ text-align: center;
+}
+.change-questions {
+  margin-top: 2rem;
+}
 @media screen and (max-width: 767px){
   .warning-wrapper {
     padding: 1rem;
