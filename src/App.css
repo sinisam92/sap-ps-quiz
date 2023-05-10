@@ -110,6 +110,15 @@ span {
 .change-questions {
   margin-top: 2rem;
 }
+.questions-container {
+  display: flex;
+  position: relative;
+}
+.show-answers--button {
+  position: absolute;
+  top: 70px;
+  right: 150px; 
+}
 @media screen and (max-width: 767px){
   .warning-wrapper {
     padding: 1rem;

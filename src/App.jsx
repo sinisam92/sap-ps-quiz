@@ -7,10 +7,10 @@ function App() {
   const [results, setResults] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [randomizedArr, setRandomizedArr] = useState([]);
+  const [showAnswersButton, setShowAnswersButton] = useState(false);
   // console.log(randomizedArr);
   const handleSubmit = (event) => {
     event.preventDefault();
-
     // const newResults = [];
     randomizedArr.forEach((question, index) => {
       const inputs = document.querySelectorAll(`input[name="${index}"]`);
@@ -24,6 +24,7 @@ function App() {
         }
       });
     });
+    setShowAnswersButton(true);
     // setResults(newResults);
   };
   useEffect(() => {
@@ -39,7 +40,14 @@ function App() {
   const handleButtonClick = () => {
     setButtonClicked((prevState) => !prevState);
   };
-
+  const handleShowAnswers = (index) => {
+    const inputs = document.querySelectorAll(`input[name="${index}"]`);
+    inputs.forEach((input) => {
+      const isCorrect = input.value === 'true';
+      const className = isCorrect ? 'correct' : 'incorrect';
+      input.parentNode.classList.add(className);
+    });
+  };
   return (
     <>
       <h1>SAP Project Systems Certification Quiz</h1>
@@ -62,37 +70,50 @@ function App() {
       <form onSubmit={handleSubmit}>
         <ol>
           {randomizedArr.map((question, index) => (
-            <li key={index}>
-              <h3>{question.question}</h3>
-              {question.options.map((option, optionIndex) => {
-                if (
-                  question.type === 'true_false' ||
-                  question.type === 'multiple_choice'
-                ) {
-                  return (
-                    <div key={optionIndex}>
-                      <label>
-                        <input type='radio' name={index} value={option.value} />{' '}
-                        {option.option}{' '}
-                      </label>
-                    </div>
-                  );
-                } else if (question.type === 'multiple_right_answers') {
-                  return (
-                    <div key={optionIndex}>
-                      <label>
-                        <input
-                          type='checkbox'
-                          name={index}
-                          value={option.value}
-                        />
-                        {option.option}
-                      </label>
-                    </div>
-                  );
-                }
-              })}
-            </li>
+            <div key={index} className='questions-container'>
+              {showAnswersButton && (
+                <div className='show-answers--button'>
+                  <button onClick={() => handleShowAnswers(index)}>
+                    Show Answers
+                  </button>
+                </div>
+              )}
+              <li>
+                <h3>{question.question}</h3>
+                {question.options.map((option, optionIndex) => {
+                  if (
+                    question.type === 'true_false' ||
+                    question.type === 'multiple_choice'
+                  ) {
+                    return (
+                      <div key={optionIndex}>
+                        <label>
+                          <input
+                            type='radio'
+                            name={index}
+                            value={option.value}
+                          />{' '}
+                          {option.option}{' '}
+                        </label>
+                      </div>
+                    );
+                  } else if (question.type === 'multiple_right_answers') {
+                    return (
+                      <div key={optionIndex}>
+                        <label>
+                          <input
+                            type='checkbox'
+                            name={index}
+                            value={option.value}
+                          />
+                          {option.option}
+                        </label>
+                      </div>
+                    );
+                  }
+                })}
+              </li>
+            </div>
           ))}
         </ol>
         <div className='button-wrapper'>

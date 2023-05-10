@@ -1692,30 +1692,6 @@ export default [
   },
   {
     question:
-      'Which of the following are examples of project planning objects in SAP PS? (Select all that apply)',
-    type: 'multiple_right_answers',
-    options: [
-      {
-        option: 'Network',
-        value: true,
-      },
-      {
-        option: 'Activity',
-        value: true,
-      },
-      {
-        option: 'WBS Element',
-        value: true,
-      },
-      {
-        option: 'Material',
-        value: false,
-      },
-    ],
-    correct_answers: ['Network', 'Activity', 'WBS Element'],
-  },
-  {
-    question:
       'In SAP PS, which type of activity can be performed in parallel with other activities?',
     type: 'multiple_choice',
     options: [
