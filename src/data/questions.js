@@ -1,5 +1,88 @@
 export default [
   {
+    question:
+      'You want to extrapolate basic dates from lower to higher-level WBS elements. Which planning method do you choose?Please choose the correct answer.',
+    type: 'multiple_choice',
+    options: [
+      { option: 'Free planning', value: false },
+      { option: 'Strict bottom-up', value: false },
+      { option: 'Bottom-up', value: true },
+      { option: 'Top-down', value: false },
+    ],
+    correct_answer: 'Bottom-up',
+  },
+  {
+    question:
+      'Which method of revenue planning allows you to follow the same procedure as in hierarchical cost planning or can be entered by revenue element?',
+    type: 'multiple_choice',
+    options: [
+      { option: 'Sales order planning', value: false },
+      { option: 'Billing plan in project billing elements', value: false },
+      {
+        option: 'Manual planning in billing elements in the project structure',
+        value: true,
+      },
+      { option: 'Hierarchical billing plan', value: false },
+    ],
+    correct_answer:
+      ' Manual planning in billing elements in the project structure',
+  },
+  {
+    question:
+      'In which type of settlement the costs of all the periods up to the one you specify in settlement are settled?',
+    type: 'multiple_choice',
+    options: [
+      { option: 'Overview settlement', value: false },
+      { option: 'Profile settlement', value: false },
+      { option: 'Periodic settlement', value: false },
+      { option: 'Full settlement', value: true },
+    ],
+    correct_answer: ' Full settlement',
+  },
+  {
+    question:
+      'Which function of budgeting allows you to transfer any funds not used up in the previous fiscal year to the budget of the new fiscal year?',
+    type: 'multiple_choice',
+    options: [
+      { option: 'Budget release function', value: false },
+      { option: 'Budget Return function', value: false },
+      { option: 'Budget carry forward function', value: true },
+      { option: 'Budget transfer function', value: false },
+    ],
+    correct_answer: 'Budget carry forward function',
+  },
+  {
+    question:
+      'Which indicator determines whether summarization is executed on the basis of classification or master data characteristics; in a network profile?',
+    type: 'multiple_choice',
+    options: [
+      { option: 'Version profile indicator', value: false },
+      { option: 'Capacity requirement indicator', value: false },
+      { option: 'Proj.summ.master data indicator', value: true },
+      { option: 'Project summarization indicator', value: false },
+    ],
+    correct_answer: 'Proj.summ.master data indicator',
+  },
+  {
+    question:
+      'Identify the correct reason if a network with successive activities in a Gantt chart has the same earliest start and earliest finish date as the network header.',
+    type: 'multiple_choice',
+    options: [
+      { option: 'The control key is set to no scheduling.', value: false },
+      {
+        option: 'The normal duration of each activity is missing.',
+        value: false,
+      },
+      {
+        option: 'The scheduling type is set to capacity requirements only.',
+        value: true,
+      },
+      { option: 'There is a loop in the network.', value: false },
+      { option: 'None of these', value: false },
+    ],
+    correct_answer: 'The scheduling type is set to capacity requirements only.',
+  },
+  {
     question: 'Which of the following is a planning level in SAP PS?',
     type: 'multiple_choice',
     options: [
