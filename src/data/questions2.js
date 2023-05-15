@@ -3353,6 +3353,116 @@ export default [
     correct_answer: ['ENABLE', 'RENEW', 'NEW'],
   },
   {
+    question: 'Which of the following is not a version type in cost planning?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'Project version', value: true },
+      { option: 'Controlling (CO) version', value: true },
+      { option: 'Sales version', value: false },
+      { option: 'Simulation version', value: true },
+    ],
+    correct_answer: [
+      'Simulation version',
+      'Controlling (CO) version',
+      'Project version',
+    ],
+  },
+  {
+    question:
+      'The valuation variant contains all information that controls the valuation of which of the following?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'External activities', value: true },
+      { option: 'Material components', value: true },
+      { option: 'BOM', value: false },
+      { option: 'Equipment', value: false },
+      { option: 'Internal activities/processes', value: true },
+    ],
+    correct_answer: [
+      'Internal activities/processes',
+      'Material components',
+      'External activities',
+    ],
+  },
+  {
+    question:
+      'For which of the following items can you determine planned costs?',
+    type: 'multiple_right_answers',
+    options: [
+      {
+        option: 'Activity inputs for internally processed activities',
+        value: true,
+      },
+      {
+        option:
+          'Primary costs for externally processed activities and services',
+        value: true,
+      },
+      { option: 'Primary costs for work centers', value: false },
+      { option: 'Primary costs for material components', value: true },
+      { option: 'Primary costs for general cost activities', value: true },
+    ],
+    correct_answer: [
+      'Primary costs for material components',
+      'Primary costs for general cost activities',
+      'Primary costs for externally processed activities and services',
+      'Activity inputs for internally processed activities',
+    ],
+  },
+  {
+    question:
+      'Which of the following factors should you consider when specifying the Appended and Apportioned indicators?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'Order type', value: true },
+      { option: 'Company code', value: true },
+      { option: 'Controlling area', value: false },
+      { option: 'Order category', value: true },
+    ],
+    correct_answer: ['Controlling area', 'Order type', 'Order category'],
+  },
+  {
+    question:
+      'For which of the following can you activate statistical key figures?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'Network activity elements', value: true },
+      { option: 'WBS', value: true },
+      { option: 'Milestones', value: false },
+      { option: 'Components', value: false },
+      { option: 'Networks', value: true },
+    ],
+    correct_answer: ['Networks', 'WBS', 'Network activity elements'],
+  },
+  {
+    question:
+      'What interfaces are available with cost planning in SAP S/4HANA?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'SAP Analysis for Microsoft Office', value: true },
+      { option: 'MS Office', value: false },
+      { option: 'Web Dynpro', value: true },
+      { option: 'SAP S/4HANA', value: true },
+    ],
+    correct_answer: [
+      'SAP S/4HANA',
+      'Web Dynpro',
+      'SAP Analysis for Microsoft Office',
+    ],
+  },
+  {
+    question: 'Which of the following can be assigned to activities?',
+    type: 'multiple_right_answers',
+    options: [
+      { option: 'BOM', value: false },
+      { option: 'Equipment', value: false },
+      { option: 'Milestones', value: true },
+      { option: 'Documents', value: true },
+      { option: 'Material components', value: true },
+    ],
+    correct_answer: ['Milestones', 'Documents', 'Material components'],
+  },
+  {
     question: 'For what purposes can a company use WBS elements?',
     type: 'multiple_right_answers',
     options: [
@@ -3383,7 +3493,95 @@ export default [
       { option: 'True', value: true },
       { option: 'False', value: false },
     ],
-    correct_answer: true,
+    correct_answer: 'True',
+  },
+  {
+    question: 'You can plan travel expenses using general cost activities.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question: 'Cost planning using unit costing is period based.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'Only a primary cost element can be assigned to the process master record.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'You can change the costing sheet and overhead key in the activity-assigned header.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'The transaction code for editing planning profiles is OKKT, and the transaction code for editing costing and valuation variants is OPSB.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'You cannot define the controlling version for planning calculated values in Easy Cost Planning.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'You can use the account assignment category in the purchase order to determine if the goods or invoice receipt is valued or if it gives rise to more planned costs.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'The statistical key figure determines if planned costs are calculated for the activity.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question:
+      'Project scheduling and cost element planning are independent of each other',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
   },
   {
     question:
@@ -3393,7 +3591,7 @@ export default [
       { option: 'True', value: false },
       { option: 'False', value: true },
     ],
-    correct_answer: false,
+    correct_answer: 'False',
   },
   {
     question:
@@ -3403,7 +3601,7 @@ export default [
       { option: 'True', value: false },
       { option: 'False', value: true },
     ],
-    correct_answer: false,
+    correct_answer: 'False',
   },
   {
     question: 'The SAP Fiori UX is only available for expert users?',
@@ -3412,7 +3610,7 @@ export default [
       { option: 'True', value: false },
       { option: 'False', value: true },
     ],
-    correct_answer: false,
+    correct_answer: 'False',
   },
   {
     question:
@@ -3422,7 +3620,7 @@ export default [
       { option: 'True', value: false },
       { option: 'False', value: true },
     ],
-    correct_answer: false,
+    correct_answer: 'False',
   },
   {
     question:
