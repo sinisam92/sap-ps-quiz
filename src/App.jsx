@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import questions from './data/questions';
-import questions2 from './data/questions2';
+// import questions from './data/questions';
+import questions from './data/questions2';
 
 function App() {
   const [results, setResults] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [randomizedArr, setRandomizedArr] = useState([]);
   const [showAnswersButton, setShowAnswersButton] = useState(false);
-  // console.log(randomizedArr);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     // const newResults = [];
@@ -30,11 +30,8 @@ function App() {
   useEffect(() => {
     const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
     const shuffledQuestions = shuffle(questions);
-    const shuffledQuestions2 = shuffle(questions2);
-
-    const randomQuestionArray =
-      Math.random() < 0.5 ? shuffledQuestions : shuffledQuestions2;
-    setRandomizedArr(randomQuestionArray);
+    const randomAndSliced = shuffledQuestions.slice(0, 80);
+    setRandomizedArr(randomAndSliced);
   }, [buttonClicked]);
 
   const handleButtonClick = () => {
