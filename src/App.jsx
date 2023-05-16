@@ -28,6 +28,16 @@ function App() {
     // setResults(newResults);
   };
   useEffect(() => {
+    randomizedArr.forEach((question, index) => {
+      const inputs = document.querySelectorAll(`input[name="${index}"]`);
+      inputs.forEach((input) => {
+        if (input.checked) {
+          input.parentNode.classList.remove('correct', 'incorrect');
+        }
+      });
+    });
+    let element = document.getElementById('form');
+    element.reset();
     const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
     const shuffledQuestions = shuffle(questions);
     const randomAndSliced = shuffledQuestions.slice(0, 80);
@@ -64,7 +74,7 @@ function App() {
           New Questions
         </button>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form id='form' onSubmit={handleSubmit}>
         <ol>
           {randomizedArr.map((question, index) => (
             <div key={index} className='questions-container'>
