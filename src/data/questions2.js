@@ -89,16 +89,6 @@ export default [
     correct_answer: true,
   },
   {
-    question:
-      'A WBS element in SAP PS represents a single task or a group of related tasks.',
-    type: 'true_false',
-    options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
-    ],
-    correct_answer: true,
-  },
-  {
     question: 'SAP PS allows for the tracking of project costs in real time.',
     type: 'true_false',
     options: [
