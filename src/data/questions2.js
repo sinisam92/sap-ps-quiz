@@ -3768,4 +3768,18 @@ export default [
     ],
     correct_answer: 'To track progress and completion of a project phase',
   },
+  {
+    question: "What is the purpose of the 'milestone' in SAP PS?",
+    type: 'multiple_choice',
+    options: [
+      { option: 'To track the start date of an activity', value: false },
+      { option: 'To track the finish date of an activity', value: false },
+      {
+        option: 'To track progress and completion of a project phase',
+        value: true,
+      },
+      { option: 'To track resources assigned to a project', value: false },
+    ],
+    correct_answer: 'To track progress and completion of a project phase',
+  },
 ];
