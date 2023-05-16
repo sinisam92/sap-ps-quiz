@@ -8,7 +8,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
 
-  `git clone https://github.com/sinisam92/sap-ps-quiz`
+`git clone https://github.com/sinisam92/sap-ps-quiz`
 
 2. Navigate to the root directory of the project:
 
@@ -24,7 +24,7 @@ To start the development server and view the app, run the following command:
 
     npm run dev
 
-This will start the development server on `http://localhost:3000`.
+This will start the development server on `http://localhost:5173`.
 
 ## Building for Production
 
