@@ -299,7 +299,7 @@ export default [
     options: [
       { option: 'Start-to-Start', value: true },
       { option: 'Finish-to-Finish', value: true },
-      { option: 'Start-to-Finish', value: false },
+      { option: 'Start-to-Finish', value: true },
       { option: 'Finish-to-Start', value: true },
     ],
     correct_answer: ['Start-to-Start', 'Finish-to-Finish', 'Finish-to-Start'],
@@ -598,20 +598,6 @@ export default [
     ],
     correct_answer: 'Project Group',
   },
-
-  {
-    question:
-      'Which of the following is the default project profile in SAP Project System?',
-    type: 'multiple_choice',
-    options: [
-      { option: 'YPS1', value: false },
-      { option: 'YPS2', value: false },
-      { option: 'YPS3', value: true },
-      { option: 'YPS4', value: false },
-    ],
-    correct_answer: 'YPS3',
-  },
-
   {
     question:
       'What is the transaction code for creating a project definition in SAP Project System?',
@@ -645,10 +631,10 @@ export default [
     options: [
       { option: 'Normal', value: false },
       { option: 'Milestone', value: false },
-      { option: 'Summary', value: true },
-      { option: 'Sub-activity', value: false },
+      { option: 'Summary', value: false },
+      { option: 'Sub-activity', value: true },
     ],
-    correct_answer: 'Summary',
+    correct_answer: 'Sub-activity',
   },
 
   {
@@ -672,9 +658,10 @@ export default [
       { option: 'Finish-to-Start', value: false },
       { option: 'Start-to-Start', value: false },
       { option: 'Finish-to-Finish', value: false },
-      { option: 'Start-to-Finish', value: true },
+      { option: 'Start-to-Finish', value: false },
+      { option: 'All above are valid', value: true },
     ],
-    correct_answer: 'Start-to-Finish',
+    correct_answer: 'All above are valid',
   },
   {
     question: 'What is the purpose of SAP Project Systems?',
@@ -762,8 +749,8 @@ export default [
     question: 'Is SAP Project Systems a standalone application?',
     type: 'true_false',
     options: [
-      { option: 'True', value: true },
-      { option: 'False', value: false },
+      { option: 'True', value: false },
+      { option: 'False', value: true },
     ],
     correct_answer: false,
   },
@@ -771,14 +758,18 @@ export default [
   {
     question:
       'Which of the following SAP modules is integrated with SAP Project Systems?',
-    type: 'multiple_choice',
+    type: 'multiple_right_answers',
     options: [
-      { option: 'SAP Sales and Distribution', value: false },
+      { option: 'SAP Sales and Distribution', value: true },
       { option: 'SAP Production Planning', value: false },
       { option: 'SAP Finance and Controlling', value: true },
-      { option: 'SAP Human Capital Management', value: false },
+      { option: 'SAP Human Capital Management', value: true },
     ],
-    correct_answer: 'SAP Finance and Controlling',
+    correct_answer: [
+      'SAP Finance and Controlling',
+      'SAP Sales and Distribution',
+      'SAP Human Capital Management',
+    ],
   },
 
   {
@@ -944,14 +935,14 @@ export default [
   },
   {
     question: 'Which of the following is a component of a WBS in SAP PS?',
-    type: 'multiple_choice',
+    type: 'multiple_right_answers',
     options: [
       { option: 'Activity', value: true },
-      { option: 'Material', value: true },
-      { option: 'Document', value: false },
+      { option: 'Material', value: false },
+      { option: 'Document', value: true },
       { option: 'Invoice', value: false },
     ],
-    correct_answers: ['Activity', 'Material'],
+    correct_answers: ['Activity', 'Document'],
   },
   {
     question: 'What is a Bill of Materials (BOM) in SAP PS?',
