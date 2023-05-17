@@ -603,12 +603,13 @@ export default [
       'What is the transaction code for creating a project definition in SAP Project System?',
     type: 'multiple_choice',
     options: [
-      { option: 'CJ20N', value: true },
+      { option: 'CJ20N', value: false },
       { option: 'CJ01', value: false },
       { option: 'CJ02', value: false },
+      { option: 'CN42N', value: true },
       { option: 'CJ03', value: false },
     ],
-    correct_answer: 'CJ20N',
+    correct_answer: 'CN42N',
   },
 
   {

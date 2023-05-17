@@ -31,9 +31,7 @@ function App() {
     randomizedArr.forEach((question, index) => {
       const inputs = document.querySelectorAll(`input[name="${index}"]`);
       inputs.forEach((input) => {
-        if (input.checked) {
-          input.parentNode.classList.remove('correct', 'incorrect');
-        }
+        input.parentNode.classList.remove('correct', 'incorrect');
       });
     });
     let element = document.getElementById('form');
@@ -42,6 +40,7 @@ function App() {
     const shuffledQuestions = shuffle(questions);
     const randomAndSliced = shuffledQuestions.slice(0, 80);
     setRandomizedArr(randomAndSliced);
+    setShowAnswersButton(false);
   }, [buttonClicked]);
 
   const handleButtonClick = () => {
