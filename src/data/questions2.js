@@ -3594,6 +3594,7 @@ export default [
     ],
     correct_answer: 'False',
   },
+
   {
     question:
       'The long-term goal of the SAP UX strategy is to offer only major business and analytic applications on SAP S/4HANA with SAP Fiori as the unified UI.',
@@ -3606,7 +3607,63 @@ export default [
   },
   {
     question:
+      'If you maintain a billing plan for the WBS element, the values from the SD document and the billing plan are added.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+
+  {
+    question:
+      'The item category becomes an influencing factor in the selection process if you choose an alternative search strategy for the requirements type determination.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question:
+      ' You can specify whether funds are to be assigned as planned values or distributed by period in the budget profile.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+
+  {
+    question:
       'Which of the following statements about SAP PS costs are true? (Select all that apply)',
+    type: 'multiple_right_answers',
+    options: [
+      {
+        option: 'SAP PS supports cost planning at the WBS element level',
+        value: true,
+      },
+      {
+        option: 'SAP PS allows you to allocate costs to different cost centers',
+        value: true,
+      },
+      {
+        option: 'SAP PS does not support cost controlling and monitoring',
+        value: false,
+      },
+      {
+        option: "SAP PS only supports planning costs in the project's currency",
+        value: false,
+      },
+    ],
+    correct_answer: ['SAP PS supports cost planning at the WBS element level'],
+  },
+  {
+    question:
+      'Which of the following tasks is not performed by availability control?',
     type: 'multiple_right_answers',
     options: [
       {
@@ -3633,23 +3690,53 @@ export default [
     type: 'multiple_choice',
     options: [
       {
-        option: 'To create project networks',
-        value: false,
-      },
-      {
-        option: 'To create and maintain project structures',
+        option: 'Determine the corresponding assigned funds',
         value: true,
       },
       {
-        option: 'To create and maintain project cost estimates',
+        option:
+          'Check the assigned funds against the budgets of the controlling elements',
+        value: true,
+      },
+      {
+        option: 'Determine the overall planned and actual annual values',
         value: false,
       },
       {
-        option: 'To create and maintain project schedules',
+        option: 'Determine the budget-bearing WBS element',
+        value: true,
+      },
+    ],
+    correct_answer: [
+      'Determine the corresponding assigned funds',
+      'Determine the budget-bearing WBS element',
+      'Check the assigned funds against the budgets of the controlling elements',
+    ],
+  },
+  {
+    question:
+      'Which of the following tasks is not performed by availability control?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Determine the corresponding assigned funds',
+        value: false,
+      },
+      {
+        option:
+          'Check the assigned funds against the budgets of the controlling elements',
+        value: false,
+      },
+      {
+        option: 'Determine the overall planned and actual annual values',
+        value: true,
+      },
+      {
+        option: 'Determine the budget-bearing WBS element',
         value: false,
       },
     ],
-    correct_answer: 'To create and maintain project structures',
+    correct_answer: 'Determine the overall planned and actual annual values',
   },
   {
     question:
