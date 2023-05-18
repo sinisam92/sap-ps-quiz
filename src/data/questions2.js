@@ -3615,10 +3615,29 @@ export default [
     ],
     correct_answer: 'False',
   },
-
+  {
+    question:
+      'Item category N is entered for materials that are kept in stock, whereas item category L is used for components that are procured directly by a network activity.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
   {
     question:
       'The item category becomes an influencing factor in the selection process if you choose an alternative search strategy for the requirements type determination.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question:
+      'Availability control can identify commitments for a project that are too high to trigger various actions in response.',
     type: 'true_false',
     options: [
       { option: 'True', value: true },
