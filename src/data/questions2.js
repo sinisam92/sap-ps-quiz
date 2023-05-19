@@ -3647,7 +3647,26 @@ export default [
   },
   {
     question:
-      ' You can specify whether funds are to be assigned as planned values or distributed by period in the budget profile.',
+      'The actual costing variant determines the valuation strategy for activities and businesas processes.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question: 'You can use CATS to post time to a maintenance order.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: true },
+      { option: 'False', value: false },
+    ],
+    correct_answer: 'True',
+  },
+  {
+    question:
+      'You can specify whether funds are to be assigned as planned values or distributed by period in the budget profile.',
     type: 'true_false',
     options: [
       { option: 'True', value: false },
@@ -3655,7 +3674,36 @@ export default [
     ],
     correct_answer: 'False',
   },
-
+  {
+    question:
+      'During the goods receipt of the purchased materials, the stock account is debited for the purchase order value and the clearing account is credited for the inventory value (dynamic standard value for project stock).',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'You post the goods receipt for the non-stock component to inventory accounts.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
+  {
+    question:
+      'A billing rule cannot specify whether the amount to be billed is a down payment, partial invoice, or final invoice.',
+    type: 'true_false',
+    options: [
+      { option: 'True', value: false },
+      { option: 'False', value: true },
+    ],
+    correct_answer: 'False',
+  },
   {
     question:
       'Which of the following statements about SAP PS costs are true? (Select all that apply)',
@@ -3679,6 +3727,36 @@ export default [
       },
     ],
     correct_answer: ['SAP PS supports cost planning at the WBS element level'],
+  },
+  {
+    question:
+      'Which of the following is not possible using Easy Cost Planning Execution Services? Choose the correct answer.',
+    type: 'multiple_right_answers',
+    options: [
+      {
+        option: 'Goods issues for processes',
+        value: true,
+      },
+      {
+        option: 'Internal activity allocation for internal activities',
+        value: true,
+      },
+      {
+        option: 'Reservations for material items',
+        value: true,
+      },
+      {
+        option:
+          'Purchase orders for material items, external activity items, service items, and variable items',
+        value: true,
+      },
+    ],
+    correct_answer: [
+      'Purchase orders for material items, external activity items, service items, and variable items',
+      'Reservations for material items',
+      'Internal activity allocation for internal activities',
+      'Goods issues for processes',
+    ],
   },
   {
     question:
@@ -3808,6 +3886,158 @@ export default [
       },
     ],
     correct_answer: 'Start-to-start activity',
+  },
+  {
+    question:
+      'What is appropriate definition for Q account assignment category?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Important for project stock',
+        value: true,
+      },
+      {
+        option:
+          'Important for sales order items sold from plant stock with value posting to the project',
+        value: false,
+      },
+      {
+        option:
+          'Important for non-valuated project stock with WBS and sales order item',
+        value: false,
+      },
+      {
+        option: 'Important for make-to-order production without WBS',
+        value: false,
+      },
+      {
+        option: 'Important for directly pro-cured components',
+        value: false,
+      },
+    ],
+    correct_answer: 'Important for project stock',
+  },
+  {
+    question:
+      'What is appropriate definition for F account assignment category?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Important for project stock',
+        value: false,
+      },
+      {
+        option:
+          'Important for sales order items sold from plant stock with value posting to the project',
+        value: false,
+      },
+      {
+        option:
+          'Important for non-valuated project stock with WBS and sales order item',
+        value: false,
+      },
+      {
+        option: 'Important for make-to-order production without WBS',
+        value: false,
+      },
+      {
+        option: 'Important for directly pro-cured components',
+        value: true,
+      },
+    ],
+    correct_answer: 'Important for directly pro-cured components',
+  },
+  {
+    question:
+      'What is appropriate definition for D account assignment category?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Important for project stock',
+        value: false,
+      },
+      {
+        option:
+          'Important for sales order items sold from plant stock with value posting to the project',
+        value: false,
+      },
+      {
+        option:
+          'Important for non-valuated project stock with WBS and sales order item',
+        value: true,
+      },
+      {
+        option: 'Important for make-to-order production without WBS',
+        value: false,
+      },
+      {
+        option: 'Important for directly pro-cured components',
+        value: false,
+      },
+    ],
+    correct_answer:
+      'Important for non-valuated project stock with WBS and sales order item',
+  },
+  {
+    question:
+      'What is appropriate definition for G account assignment category?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Important for project stock',
+        value: false,
+      },
+      {
+        option:
+          'Important for sales order items sold from plant stock with value posting to the project',
+        value: true,
+      },
+      {
+        option:
+          'Important for non-valuated project stock with WBS and sales order item',
+        value: false,
+      },
+      {
+        option: 'Important for make-to-order production without WBS',
+        value: false,
+      },
+      {
+        option: 'Important for directly pro-cured components',
+        value: false,
+      },
+    ],
+    correct_answer:
+      'Important for sales order items sold from plant stock with value posting to the project',
+  },
+  {
+    question:
+      'What is appropriate definition for E account assignment category?',
+    type: 'multiple_choice',
+    options: [
+      {
+        option: 'Important for project stock',
+        value: false,
+      },
+      {
+        option:
+          'Important for sales order items sold from plant stock with value posting to the project',
+        value: false,
+      },
+      {
+        option:
+          'Important for non-valuated project stock with WBS and sales order item',
+        value: false,
+      },
+      {
+        option: 'Important for make-to-order production without WBS',
+        value: true,
+      },
+      {
+        option: 'Important for directly pro-cured components',
+        value: false,
+      },
+    ],
+    correct_answer: 'Important for make-to-order production without WBS',
   },
   {
     question: "What is the purpose of the 'project definition' in SAP PS?",
