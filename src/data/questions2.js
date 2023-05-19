@@ -762,7 +762,7 @@ export default [
     type: 'multiple_right_answers',
     options: [
       { option: 'SAP Sales and Distribution', value: true },
-      { option: 'SAP Production Planning', value: false },
+      { option: 'SAP Production Planning', value: true },
       { option: 'SAP Finance and Controlling', value: true },
       { option: 'SAP Human Capital Management', value: true },
     ],
@@ -770,6 +770,7 @@ export default [
       'SAP Finance and Controlling',
       'SAP Sales and Distribution',
       'SAP Human Capital Management',
+      'SAP Production Planning',
     ],
   },
 
@@ -3941,11 +3942,11 @@ export default [
         value: false,
       },
       {
-        option: 'Important for directly pro-cured components',
+        option: 'Important for directly procured components',
         value: true,
       },
     ],
-    correct_answer: 'Important for directly pro-cured components',
+    correct_answer: 'Important for directly procured components',
   },
   {
     question:
@@ -4071,20 +4072,6 @@ export default [
       { option: 'To define a network with no activities', value: false },
     ],
     correct_answer: 'To define a set of activities that are commonly used',
-  },
-  {
-    question: "What is the purpose of the 'milestone' in SAP PS?",
-    type: 'multiple_choice',
-    options: [
-      { option: 'To track the start date of an activity', value: false },
-      { option: 'To track the finish date of an activity', value: false },
-      {
-        option: 'To track progress and completion of a project phase',
-        value: true,
-      },
-      { option: 'To track resources assigned to a project', value: false },
-    ],
-    correct_answer: 'To track progress and completion of a project phase',
   },
   {
     question: "What is the purpose of the 'milestone' in SAP PS?",
